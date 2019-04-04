@@ -29,3 +29,5 @@ params.policy即可
 params.signature即可
 ```
   
+  
+# 小程序端 可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密 规则
