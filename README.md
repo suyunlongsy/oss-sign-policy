@@ -14,20 +14,14 @@ const mpHelper = new MpUploadOssHelper({
 
 // 生成的参数
 const params = mpHelper.createUploadParams();
+const {
+  policy,
+  signature,
+} = params
 
-```
-
-### 获取policy
-
-```javascript
-params.policy即可
-```
-
-### 获取signature
-
-```javascript
-params.signature即可
 ```
   
   
-# 小程序端 可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密 规则
+### 小程序端 
+
+可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密规则，详见index-mini.js
