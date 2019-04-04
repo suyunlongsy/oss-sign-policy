@@ -6,7 +6,7 @@ const getOssPolicyAndSign = () => {
 	const accessid = app.oss.accessKeyId
 	const accesskey = app.oss.accessKeySecret
 
-  // 设置 policy 过期时间
+        // 设置 policy 过期时间
 	let date = new Date()
 	date.setHours(date.getHours() + 1)
 	const srcT = date.toISOString()
