@@ -27,6 +27,15 @@ const {
 
 可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密规则
 
+阿里云和天翼云 的区别 在于 最后签名的 生成方式
+```
+// 阿里
+const bytes = CryptoJS.HmacSHA1(message, accessKeySecret).toString(Utf8)
+const signature = Base64.stringify(bytes)
+
+// 天翼
+const signature = CryptoJS.HmacSHA1(message, accessKeySecret).toString(Base64)
+```
 阿里云OSS：aliyun-sign-policy.js
 
 天翼云OOS：tyyun-sign-policy.js
