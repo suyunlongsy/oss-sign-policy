@@ -1,6 +1,7 @@
 import CryptoJS from 'crypto-js'
 const Base64 = CryptoJS.enc.Base64
 const Utf8 = CryptoJS.enc.Utf8
+const app = getApp()
 
 const getTimestamp = () => {
 	const date = new Date()
@@ -12,10 +13,11 @@ const getTimestamp = () => {
 }
 
 const getOssPolicyAndSign = () => {
+	// 将 id 和 secret 挂载在 app下 
 	const accessid = app.oss.accessKeyId
 	const accesskey = app.oss.accessKeySecret
 
-        // 设置 policy 过期时间
+  // 设置 policy 过期时间
 	let date = new Date()
 	date.setHours(date.getHours() + 1)
 	const srcT = date.toISOString()
@@ -38,8 +40,8 @@ const getOssPolicyAndSign = () => {
 	const bytes = CryptoJS.HmacSHA1(message, accesskey).toString()
 	const signature = Base64.stringify(Utf8.parse(bytes))
 	
-// 	const bytes = CryptoJS.HmacSHA1(message, accesskey).toString(Utf8)
-// 	const signature = Base64.stringify(bytes)
+// const bytes = CryptoJS.HmacSHA1(message, accesskey).toString(Utf8)
+// const signature = Base64.stringify(bytes)
 
 	return {
 		signature,
