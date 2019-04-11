@@ -24,4 +24,6 @@ const {
   
 ### 小程序端 
 
-可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密规则，详见index-mini.js
+可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密规则，
+阿里云OSS：aliyun-sign-policy.js
+天翼云OOS：tyyun-sign-policy.js
