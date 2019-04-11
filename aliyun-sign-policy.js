@@ -22,6 +22,9 @@ const getOssPolicyAndSign = () => {
 	const message = policyBase64
 
 	const bytes = CryptoJS.HmacSHA1(message, accesskey).toString()
+// 	const bytes = CryptoJS.HmacSHA1(message, accesskey).toString(Utf8)
+	
+// 	const signature = Base64.stringify(Utf8.parse(bytes))
 	const signature = Base64.stringify(Utf8.parse(bytes))
 
 	return {
