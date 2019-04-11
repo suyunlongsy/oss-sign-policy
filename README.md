@@ -5,6 +5,7 @@
 ### node后端使用
 ``` JavaScript
 
+// aliyun 的 node sdk
 const mpHelper = new MpUploadOssHelper({
     accessKeyId: AccessKeyId,
     accessKeySecret: AccessKeySecret,
@@ -24,6 +25,8 @@ const {
   
 ### 小程序端 
 
-可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密规则，
+可以自己生成 policy 和 signature 利用 crypto.js 使用相同的加密规则
+
 阿里云OSS：aliyun-sign-policy.js
+
 天翼云OOS：tyyun-sign-policy.js
