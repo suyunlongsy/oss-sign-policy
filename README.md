@@ -7,10 +7,10 @@
 
 // aliyun 的 node sdk
 const mpHelper = new MpUploadOssHelper({
-    accessKeyId: AccessKeyId,
-    accessKeySecret: AccessKeySecret,
-    timeout: 1,     // 限制参数的有效时间(单位: 小时)
-    maxSize: 10     // 限制上传文件大小(单位: Mb)
+  accessKeyId: AccessKeyId,
+  accessKeySecret: AccessKeySecret,
+  timeout: 1,     // 限制参数的有效时间(单位: 小时)
+  maxSize: 10     // 限制上传文件大小(单位: Mb)
 });
 
 // 生成的参数
